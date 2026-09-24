@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jorge A. Rodríguez Aguirregabiria — Intensive Care Physician · CV</title>
+<meta name="description" content="Curriculum vitae of Jorge A. Rodríguez Aguirregabiria, intensive care physician. Experience, training, research, clinical development and courses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF; --tint:#F3F8F7; --ink:#0E2229; --muted:#587179;
+    --accent:#12A38B; --accent-deep:#0B7C6E; --amber:#E9A93C;
+    --rail-a:#0B2B33; --rail-b:#11545C; --hairline:#DFE9E7;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'Inter',system-ui,sans-serif;
+    --disp:'Space Grotesk','Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:15px;line-height:1.6}
+  a{color:var(--accent-deep);text-decoration:none}
+  a:hover{text-decoration:underline}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:8px 14px;border-radius:0 0 8px 0;z-index:60}
+  .skip:focus{left:0}
+  .ic{width:1em;height:1em;flex-shrink:0;vertical-align:-.14em}
+
+  /* ---------- Rail ---------- */
+  .menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:50;background:var(--rail-a);color:#EAF6F3;border:1px solid rgba(234,246,243,.25);font-family:var(--mono);font-size:13px;padding:9px 14px;border-radius:10px;cursor:pointer}
+  .backdrop{display:none;position:fixed;inset:0;background:rgba(8,32,38,.55);z-index:38}
+  .backdrop.show{display:block}
+  .rail{position:fixed;top:0;left:0;bottom:0;width:264px;z-index:40;color:rgba(234,246,243,.78);
+    background:linear-gradient(168deg,var(--rail-a) 0%,var(--rail-b) 100%);
+    display:flex;flex-direction:column;padding:34px 22px 20px;overflow-y:auto}
+  .avatar{width:74px;height:74px;border-radius:50%;background:rgba(234,246,243,.08);
+    border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;
+    font-family:var(--disp);font-weight:700;font-size:26px;color:#fff;letter-spacing:.02em}
+  .rail .name{font-family:var(--disp);font-weight:600;font-size:19px;line-height:1.25;color:#fff;margin:16px 0 2px}
+  .rail .tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#63C7B5}
+  .rail-c{margin:20px 0 24px;display:flex;flex-direction:column;gap:10px;font-size:12.5px}
+  .rail-c span{display:flex;gap:9px;align-items:flex-start;line-height:1.45}
+  .rail-c .ic{margin-top:2px;color:#63C7B5}
+  .rail nav{display:flex;flex-direction:column;gap:1px}
+  .rail nav a{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:rgba(234,246,243,.72);
+    padding:9px 12px;border-left:2px solid transparent;display:flex;gap:10px;align-items:center;border-radius:0 8px 8px 0}
+  .rail nav a .ic{color:#63C7B5;width:1.15em;height:1.15em}
+  .rail nav a:hover{color:#fff;text-decoration:none;background:rgba(234,246,243,.07)}
+  .rail nav a.active{color:#fff;border-left-color:var(--amber);background:rgba(234,246,243,.08)}
+  .rail-foot{margin-top:auto;padding-top:22px;font-family:var(--mono);font-size:10px;line-height:1.7;color:rgba(234,246,243,.4);letter-spacing:.06em}
+
+  /* ---------- Contenido ---------- */
+  .content{margin-left:264px}
+  .page{max-width:900px;margin:0 auto;padding:0 42px 70px}
+
+  .hero{background:linear-gradient(135deg,var(--tint) 0%,#fff 62%);border-bottom:1px solid var(--hairline);
+    margin:0 -42px;padding:54px 42px 34px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-90px;top:-90px;width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle,rgba(18,163,139,.16),transparent 68%)}
+  .hero h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,4.6vw,52px);line-height:1.05;letter-spacing:-.015em}
+  .hero .role{margin-top:10px;display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;
+    font-weight:600;font-size:14.5px;padding:7px 16px;border-radius:999px}
+  .hero .subs{margin-top:14px;color:var(--muted);font-size:14px}
+  .contact{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .contact span{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--hairline);
+    border-radius:999px;padding:7px 15px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+  .contact .ic{color:var(--accent);width:1.15em;height:1.15em}
+  .contact a{color:var(--ink)}
+  .langsw{display:flex;justify-content:flex-end;gap:14px;margin-bottom:20px;font-family:var(--mono);font-size:12px}
+  .langsw a{color:var(--muted);text-decoration:none}
+  .langsw .on{color:var(--accent-deep);font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:2px}
+
+  section{margin-top:50px;scroll-margin-top:24px}
+  .sh{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+  .sh .badge{width:42px;height:42px;border-radius:12px;background:linear-gradient(140deg,var(--accent),var(--accent-deep));
+    display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;box-shadow:0 4px 12px rgba(18,163,139,.28)}
+  .sh .badge .ic{width:22px;height:22px}
+  h2{font-family:var(--disp);font-weight:600;font-size:24px;letter-spacing:-.01em}
+  .sh small{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+
+  .entry{display:grid;grid-template-columns:158px 1fr;gap:8px 24px;padding:14px 0;border-bottom:1px solid var(--hairline)}
+  .entry:last-child{border-bottom:0}
+  .when{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:3px}
+  .when .pill{display:inline-block;background:var(--tint);border:1px solid var(--hairline);border-radius:999px;padding:2px 10px;margin-bottom:4px;font-weight:500;color:var(--accent-deep)}
+  .what h3{font-family:var(--disp);font-size:16.5px;font-weight:600;line-height:1.35}
+  .where{font-family:var(--mono);font-size:12px;color:var(--accent-deep);margin:3px 0 6px}
+  .what p{color:var(--muted);max-width:66ch}
+  .what ul{list-style:none;margin-top:6px}
+  .what li{position:relative;padding-left:18px;margin-top:4px;color:var(--muted)}
+  .what li::before{content:"";position:absolute;left:0;top:.66em;width:8px;height:2px;background:var(--accent);border-radius:1px}
+
+  .kbd{font-family:var(--mono);font-size:11px;color:var(--accent-deep);background:var(--tint);border:1px solid var(--hairline);border-radius:6px;padding:1px 8px;white-space:nowrap}
+  a.dl{font-family:var(--mono);font-size:11.5px;color:var(--accent-deep);white-space:nowrap;border:1px solid var(--hairline);background:var(--tint);border-radius:7px;padding:2px 9px;display:inline-flex;gap:5px;align-items:center;margin-top:7px}
+  a.dl:hover{text-decoration:none;border-color:var(--accent)}
+
+  /* Desarrollo: tarjetas */
+  .devgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .devcard{border:1px solid var(--hairline);border-radius:14px;padding:18px 20px;background:linear-gradient(150deg,var(--tint),#fff 70%);display:flex;flex-direction:column;gap:6px}
+  .devcard .top{display:flex;gap:12px;align-items:center}
+  .devcard .dico{width:38px;height:38px;border-radius:10px;background:#fff;border:1.5px solid var(--accent);color:var(--accent-deep);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .devcard .dico .ic{width:20px;height:20px}
+  .devcard h3{font-family:var(--disp);font-size:15.5px;font-weight:600}
+  .devcard h3 a{color:var(--ink)}
+  .devcard h3 a:hover{color:var(--accent-deep)}
+  .devcard small{font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .devcard p{font-size:13.5px;color:var(--muted)}
+  .devcard.full{grid-column:1 / -1}
+
+  .badge-type{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);background:rgba(233,169,60,.12);border:1px solid rgba(233,169,60,.4);border-radius:6px;padding:1px 8px;margin-left:8px;vertical-align:2px}
+
+  /* Cursos */
+  .courses{list-style:none}
+  .courses li{display:grid;grid-template-columns:54px 1fr auto;gap:4px 14px;padding:6.5px 0;border-bottom:1px solid var(--hairline);align-items:baseline}
+  .courses li:last-child{border-bottom:0}
+  .courses .cy{font-family:var(--mono);font-size:12px;color:var(--accent-deep);font-weight:500}
+  .courses strong{font-size:14px;font-weight:600}
+  .courses em{font-style:normal;color:var(--muted);font-size:13px}
+  .courses .hrs{font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:nowrap}
+
+  .langs{display:flex;flex-wrap:wrap;gap:10px}
+  .langs .chip{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--hairline);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:500}
+  .langs .chip .ic{color:var(--accent-deep)}
+  .langs .chip em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+  .progs{background:linear-gradient(150deg,var(--tint),#fff 75%);border:1px solid var(--hairline);border-radius:16px;padding:20px 24px}
+  .progs .entry{border-bottom-color:var(--hairline)}
+  .progs .entry:last-child{border-bottom:0}
+
+  footer{margin-top:60px;padding-top:16px;border-top:1px solid var(--hairline);font-family:var(--mono);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  @media (max-width:1020px){
+    .menu-btn{display:block}
+    .rail{transform:translateX(-100%);transition:transform .25s ease;width:280px}
+    .rail.open{transform:translateX(0)}
+    .content{margin-left:0}
+    .hero{margin:0 -20px;padding:80px 20px 30px}
+    .page{padding:0 20px 56px}
+    .devgrid{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .entry{grid-template-columns:1fr;gap:2px}
+    .when{padding-top:0;margin-bottom:6px}
+    .courses li{grid-template-columns:44px 1fr auto}
+  }
+  @media (prefers-reduced-motion:no-preference){body{animation:fade .4s ease}@keyframes fade{from{opacity:0}to{opacity:1}}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}body{animation:none}.rail{transition:none}}
+
+  @media print{
+    body{font-size:12px}
+    .menu-btn,.rail,.backdrop,.skip{display:none !important}
+    .content{margin-left:0}
+    .hero{margin:0;padding:0 0 20px}
+    .page{max-width:none;padding:0}
+    h1{font-size:34px}
+    section{margin-top:24px;break-inside:auto}
+    .sh{break-after:avoid}
+    .entry,.courses li,.devcard{break-inside:avoid}
+    a{color:inherit}
+    a.dl{border-color:#d7dedd;background:#f2f6f5;color:var(--ink)}
+    .progs{padding:14px 16px}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="i-user" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></g>
+    <g id="i-cap" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/><path d="M22 9v6"/></g>
+    <g id="i-award" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></g>
+    <g id="i-brief" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/></g>
+    <g id="i-code" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></g>
+    <g id="i-flask" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-6 9.5A1.8 1.8 0 005.6 21h12.8A1.8 1.8 0 0020 18.5L14 9V3"/><path d="M7.5 15h9"/></g>
+    <g id="i-clock" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></g>
+    <g id="i-globe" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9z"/></g>
+    <g id="i-mail" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></g>
+    <g id="i-phone" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l1.5 5-2.5 1.5a12 12 0 005.5 5.5L15 13.5l5 1.5v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></g>
+    <g id="i-pin" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></g>
+    <g id="i-db" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5V12c0 1.7 3.6 3 8 3s8-1.3 8-3V5.5M4 12v6.5c0 1.7 3.6 3 8 3s8-1.3 8-3V12"/></g>
+    <g id="i-mobile" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></g>
+    <g id="i-monitor" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12.5" rx="2"/><path d="M9 21h6M12 16.5V21"/></g>
+    <g id="i-star" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8L12 3z"/></g>
+  </defs>
+</svg>
+
+<a class="skip" href="#perfil">Skip to content</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="rail">☰ Menu</button>
+<div class="backdrop" aria-hidden="true"></div>
+
+<aside class="rail" id="rail" aria-label="CV index">
+  <div class="avatar">JR</div>
+  <p class="name">Jorge A. Rodríguez Aguirregabiria</p>
+  <p class="tag">Intensive Care Medicine</p>
+
+  <div class="rail-c">
+    <span><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:jrodagu@gmail.com">jrodagu@gmail.com</a></span>
+    <span><svg class="ic"><use href="#i-phone"/></svg>+34 670 425 741</span>
+    <span><svg class="ic"><use href="#i-pin"/></svg>Av. Europa 4, 3º-2ºC · 28224 Pozuelo de Alarcón (Madrid)</span>
+  </div>
+
+  <nav>
+    <a href="#perfil"><svg class="ic"><use href="#i-user"/></svg>Profile</a
+    <a href="#formacion"><svg class="ic"><use href="#i-cap"/></svg>Training</a
+    <a href="#titulos"><svg class="ic"><use href="#i-award"/></svg>Degrees</a
+    <a href="#experiencia"><svg class="ic"><use href="#i-brief"/></svg>Experience</a
+    <a href="#programas"><svg class="ic"><use href="#i-code"/></svg>Development</a
+    <a href="#investigacion"><svg class="ic"><use href="#i-flask"/></svg>Research</a
+    <a href="#cursos"><svg class="ic"><use href="#i-clock"/></svg>Courses</a
+    <a href="#idiomas"><svg class="ic"><use href="#i-globe"/></svg>Languages</a
+  </nav>
+  <p class="rail-foot">UCI HM Puerta del Sur<br>UCI Madrid Montepríncipe<br>Madrid · Spain</p>
+</aside>
+
+<main class="content">
+<div class="page">
+
+  <div class="hero">
+    <div class="langsw">
+    <a href="./">ES</a><span class="on">EN</span><a href="curriculum-vitae-ca.html">CA</a>
+  </div>
+    <p style="font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px">Curriculum vitae · 2026</p>
+    <h1>Jorge A. Rodríguez Aguirregabiria</h1>
+    <span class="role"><svg class="ic"><use href="#i-star"/></svg> Intensive Care Physician · ICU Consultant</span>
+    <p class="subs">15 years of experience in intensive care units in Madrid hospitals · ultrasound and echocardiography in the critically ill · development of clinical and educational tools</p>
+    <nav class="contact" aria-label="Contact">
+      <span><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:jrodagu@gmail.com">jrodagu@gmail.com</a></span>
+      <span><svg class="ic"><use href="#i-phone"/></svg>+34 670 425 741</span>
+      <span><svg class="ic"><use href="#i-pin"/></svg>Av. Europa 4, 3º-2ºC · 28224 Pozuelo de Alarcón (Madrid)</span>
+    </nav>
+  </div>
+
+  <section id="perfil" aria-labelledby="h-perfil">
+    <div class="sh">
+      <span class="badge"><svg class="ic"><use href="#i-user"/></svg></span>
+      <div><h2 id="h-perfil">Profile</h2><small>Professional summary</small></div>
+    </div>
+    <p style="max-width:72ch;color:var(--muted);text-align:justify;hyphens:auto;-webkit-hyphens:auto">
+      Consultant in Intensive Care Medicine, trained at the Gregorio Marañón University Hospital, with 15 years of
+      experience in intensive care units in Madrid and 7 previous years in emergency medicine and primary care. I
+      currently work full time at HM Puerta del Sur Hospital (specialised in neurological pathology and post-surgical
+      care) and, over recent years, at Madrid Montepríncipe Hospital (cardiac patients, post-surgical and cardiac
+      surgery). My current interests focus on ultrasound and echocardiography in the critically ill patient and on the
+      development of databases for management, evaluation and clinical research, and the use of AI for clinical purposes.
+    </p>
+  </section>
+
+  <section id="formacion" aria-labelledby="h-formacion">
+    <div class="sh">
+      <span class="badge"><svg class="ic"><use href="#i-cap"/></svg></span>
+      <div><h2 id="h-formacion">Academic training</h2><small>Degree · Residencies · Doctorate</small></div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2010</span><br>Research proficiency (DEA)</p>
+      <div class="what">
+        <h3>Research Proficiency (DEA) — “Applicability of databases in Clinical Management”</h3>
+        <p class="where">Universidad Autónoma de Madrid · Hospital La Paz</p>
+        <p>Supervisor: Dr. Manuel Quintana Díaz. First doctoral cycle (Universidad Autónoma de Madrid, 2003).</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2006 — 2011</span><br>Residency · 5 years</p>
+      <div class="what">
+        <h3>Residency in Intensive Care Medicine</h3>
+        <p class="where">Gregorio Marañón University Hospital · Madrid</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2002 — 2005</span><br>Residency · 3 years</p>
+      <div class="what">
+        <h3>Residency in Family and Community Medicine</h3>
+        <p class="where">La Paz University Hospital · Madrid</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">1992 — 2000</span><br>Degree</p>
+      <div class="what">
+        <h3>Medical Degree (Licenciatura en Medicina)</h3>
+        <p class="where">Universidad de Navarra</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="titulos" aria-labelledby="h-titulos">
+    <div class="sh">
+      <span class="badge"><svg class="ic"><use href="#i-award"/></svg></span>
+      <div><h2 id="h-titulos">Degrees and accreditations</h2><small>Official, verifiable documentation</small></div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2011</span></p>
+      <div class="what">
+        <h3>Specialist Degree in Intensive Care Medicine</h3>
+        <p class="where">Ministry of Education / Recognition resolution</p>
+        <p><a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/afee1fd6-c670-4a83-9701-7234468ce0f7" target="_blank" rel="noopener">View resolution (PDF) ↗</a></p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2008</span></p>
+      <div class="what">
+        <h3>Accreditation from the Ministry of the Interior</h3>
+        <p class="where">Training of the State Security Forces in first aid</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2005</span></p>
+      <div class="what">
+        <h3>Specialist Degree in Family and Community Medicine</h3>
+        <p class="where">National Register of Specialists · Ministry of Health and Consumer Affairs</p>
+        <p><a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/6fce22f7-6db7-4c89-bbed-aaaee9005232" target="_blank" rel="noopener">View register certificate (PDF) ↗</a></p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2001</span></p>
+      <div class="what">
+        <h3>Certificate — Ministry of Defence (Spanish Army)</h3>
+        <p><a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/aac03c1c-74a2-4b4c-bb0b-73b68e3bef85" target="_blank" rel="noopener">View document (PDF) ↗</a></p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2000</span></p>
+      <div class="what">
+        <h3>Medical Degree (Licenciatura)</h3>
+        <p class="where">Universidad de Navarra</p>
+        <p><a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/53731a2e-ff36-482e-a924-ec7903b5ef45" target="_blank" rel="noopener">View degree (PDF) ↗</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia" aria-labelledby="h-experiencia">
+    <div class="sh">
+      <span class="badge"><svg class="ic"><use href="#i-brief"/></svg></span>
+      <div><h2 id="h-experiencia">Professional experience</h2><small>22 years in clinical practice</small></div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2020 — present</span></p>
+      <div class="what">
+        <h3>Consultant · Intensive Care Medicine Service</h3>
+        <p class="where">UCI · Hospital HM Puerta del Sur · Móstoles, Madrid</p>
+        <p>Neurological patients and post-surgical care.</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2011 — 2026</span><br>15 years</p>
+      <div class="what">
+        <h3>Consultant · Intensive Care Medicine Service</h3>
+        <p class="where">UCI · Hospital Madrid Montepríncipe · Grupo Hospital Madrid · Boadilla del Monte, Madrid</p>
+        <p>Cardiac patients, post-surgical and cardiac surgery.</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2014 — 2020</span></p>
+      <div class="what">
+        <h3>Consultant · Intensive Care Medicine Service</h3>
+        <p class="where">UCI · Hospital San José · Grupo Quirón · Madrid</p>
+        <p>Post-surgical patients and gynaecological and obstetric pathology.</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2005 — 2006</span></p>
+      <div class="what">
+        <h3>Emergency physician · S.A.R.</h3>
+        <p class="where">Centro de Salud Soto del Real · Madrid</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2004 — 2005</span></p>
+      <div class="what">
+        <h3>Primary care physician</h3>
+        <p class="where">Primary care teams, area 5 · Madrid</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2004 — 2005</span></p>
+      <div class="what">
+        <h3>Consultant · Family and Community Medicine</h3>
+        <p class="where">Centro de Salud Soto del Real · Madrid</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2001 — 2004</span></p>
+      <div class="what">
+        <h3>Consultant · Family and Community Medicine</h3>
+        <p class="where">Centro de Salud V-Centenario · Madrid</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="programas" aria-labelledby="h-programas">
+    <div class="sh">
+      <span class="badge"><svg class="ic"><use href="#i-code"/></svg></span>
+      <div><h2 id="h-programas">Clinical and educational development for the ICU</h2><small>Own tools in production</small></div>
+    </div>
+    <div class="progs">
+      <div class="devgrid">
+        <div class="devcard">
+          <div class="top"><span class="dico"><svg class="ic"><use href="#i-monitor"/></svg></span>
+            <div><h3><a href="https://jrodagu-star.github.io/Posters/app/" target="_blank" rel="noopener">ICU Dashboard ↗</a></h3>
+            <small>jrodagu-star.github.io/Posters/app · in use</small></div></div>
+          <p>Dashboard in use at the hospital as a clinical and educational support tool.</p>
+        </div>
+        <div class="devcard">
+          <div class="top"><span class="dico"><svg class="ic"><use href="#i-mobile"/></svg></span>
+            <div><h3><a href="https://www.dutydoctor.es" target="_blank" rel="noopener">DutyDoctor ↗</a></h3>
+            <small>www.dutydoctor.es · web and app</small></div></div>
+          <p>App and web application for managing on-call schedules.</p>
+        </div>
+        <div class="devcard">
+          <div class="top"><span class="dico"><svg class="ic"><use href="#i-db"/></svg></span>
+            <div><h3><a href="https://icu-connect.web.app/" target="_blank" rel="noopener">ICU-Connect ↗</a></h3>
+            <small>icu-connect.web.app · cross-platform</small></div></div>
+          <p>Cross-platform application for tracking ICU activity and as a database.</p>
+        </div>
+        <div class="devcard">
+          <div class="top"><span class="dico"><svg class="ic"><use href="#i-db"/></svg></span>
+            <div><h3>Cardiac Surgery Database</h3>
+            <small>Hospital Madrid Montepríncipe · 2016 · author and maintainer</small></div></div>
+          <p>Registry of surgical patients in Microsoft Access for unit management, evaluation and clinical research. Related work: DEA “Applicability of databases in Clinical Management” (UAM, 2010).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="investigacion" aria-labelledby="h-investigacion">
+    <div class="sh">
+      <span class="badge"><svg class="ic"><use href="#i-flask"/></svg></span>
+      <div><h2 id="h-investigacion">Research and publications</h2><small>Books · posters · communications</small></div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2025</span></p>
+      <div class="what">
+        <h3>Contributor to the ENVIN-HELICS Registry<span class="badge-type">Registry</span></h3>
+        <p class="where">Infectious Diseases Working Group · SEMICYUC</p>
+        <p>Participation as a contributor during professional practice in the ICU of HM Puerta del Sur Hospital.
+           Registry recognised by the Ministry of Health as of Interest to the Spanish National Health System.</p>
+        <p><a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/6563f416-26e4-4d15-917d-d186e55d23f2" target="_blank" rel="noopener">View certificate (PDF) ↗</a></p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2016</span></p>
+      <div class="what">
+        <h3>«Manual de Cuidados Intensivos»<span class="badge-type">Book</span></h3>
+        <p class="where">Author of chapter 13: Acute coronary syndrome · 1st edition</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2012</span></p>
+      <div class="what">
+        <h3>“Predictive model for assessing patients at high risk of death at ICU discharge”<span class="badge-type">Poster</span></h3>
+        <p class="where">First author · XLVII SEMICYUC National Congress</p>
+        <p><a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/73d84cf1-b45b-45f9-9be1-513019326412" target="_blank" rel="noopener">View presentation (.ppt) ↗</a></p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2009</span></p>
+      <div class="what">
+        <h3>«Mortality and functional assessment of patients suffering from multiorganic dysfunction syndrome»<span class="badge-type">Communication</span></h3>
+        <p class="where">Collaborator · ESICM Annual Congress, Vienna · Intensive Care Medicine 2009; 35 (supl 1): S246</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2009</span></p>
+      <div class="what">
+        <h3>«Cystatin C as a renal marker of glomerular filtration in critically ill patients»<span class="badge-type">Communication</span></h3>
+        <p class="where">Collaborator · 22nd ESICM Annual Congress, Vienna · Intensive Care Medicine 2009</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2009</span></p>
+      <div class="what">
+        <h3>“Activated protein C in patients diagnosed with septic shock”<span class="badge-type">Poster</span></h3>
+        <p class="where">Collaborator · XLIV SEMICYUC National Congress, Valladolid · Med Intensiva 2009; 33 (Especial Congreso)</p>
+      </div>
+    </div>
+    <div class="entry">
+      <p class="when"><span class="pill">2007</span></p>
+      <div class="what">
+        <h3>«Libro de Cuidados Intensivos» — Ed. Fundación Hospital de Madrid<span class="badge-type">Book</span></h3>
+        <p class="where">Author of chapters 6.4 “Trasplante de precursores hematopoyéticos” [Haematopoietic progenitor transplantation] and 7.3 “Diagnóstico del paciente con sepsis” [Diagnosis of sepsis]</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cursos" aria-labelledby="h-cursos">
+    <div class="sh">
+      <span class="badge"><svg class="ic"><use href="#i-clock"/></svg></span>
+      <div><h2 id="h-cursos">Continuing education · courses</h2><small>34 courses · 950+ accredited hours</small></div>
+    </div>
+    <ul class="courses">
+      <li><span class="cy">2026</span><div><strong>ACCIS Meeting · Congreso de Soporte Circulatorio Avanzado</strong> — <em>Valladolid</em> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/f9e438c0-7162-4c22-a531-c05ece5a2ea0" target="_blank" rel="noopener">certificate</a></div><span class="hrs">14 h</span></li>
+      <li><span class="cy">2026</span><div><strong>Cuidados Respiratorios Críticos 2026: Análisis de casos</strong></div><span class="hrs">30 h</span></li>
+      <li><span class="cy">2025</span><div><strong>Nefrología Crítica 2025: abordaje clínico-práctico de la atención del paciente crítico nefrológico</strong> — <em>redEMC · aval SEMICYUC (online, Sep–Oct)</em> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/86e1ad20-70ea-4c2a-872b-9c49aebaa845" target="_blank" rel="noopener">certificate</a></div><span class="hrs">30 h</span></li>
+      <li><span class="cy">2022</span><div><strong>VI Curso Multidisciplinar de Sistemas de Soporte Cardio-Respiratorio</strong> — <em>H.U. Puerta de Hierro Majadahonda</em> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/4cee7dbc-c2e2-45e5-a062-d8321069ad2f" target="_blank" rel="noopener">certificate</a></div><span class="hrs">12,5 h</span></li>
+      <li><span class="cy">2020</span><div><strong>SIMUVAD 2020</strong> — <em>Servicio de Anestesiología, H. La Paz</em></div><span class="hrs">99 h</span></li>
+      <li><span class="cy">2019</span><div><strong>Optimización del diagnóstico microbiológico (2ª ed.)</strong> — <em>SEIMC</em> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/ffdbe76b-e118-4d49-9276-9ce1d951d0ac" target="_blank" rel="noopener">certificate</a> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/a6fbb0b7-b2d0-4585-980f-438386104816" target="_blank" rel="noopener">certificate 2</a></div><span class="hrs">14 h</span></li>
+      <li><span class="cy">2019</span><div><strong>Simulación en el manejo integral del paciente en shock cardiogénico</strong> — <em>H.U. Puerta del Hierro Majadahonda</em> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/e429aa9a-920a-4d91-9e8d-54e931c747ad" target="_blank" rel="noopener">certificate</a> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/e1af827d-4cee-4154-a2ee-4b76e584f085" target="_blank" rel="noopener">credits</a></div><span class="hrs">18 c</span></li>
+      <li><span class="cy">2019</span><div><strong>Soporte básico en ECMO (oxigenación por membrana extracorpórea)</strong> — <em>Formación Sanitaria, online (feb–sep)</em> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/2205453a-8418-4c92-8729-04405a70c058" target="_blank" rel="noopener">certificate</a> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/0dfb11cf-18f8-4e5c-abe5-3c6ce79aaf7e" target="_blank" rel="noopener">program</a></div><span class="hrs">79 h · 17,8 c</span></li>
+      <li><span class="cy">2019</span><div><strong>Curso de dispositivos ópticos para manejo de vía aérea</strong> — <em>HM Hospitales</em> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/95add7b4-4288-437f-8f2a-ccf06cb2ba20" target="_blank" rel="noopener">certificate</a></div><span class="hrs">7 h · 1,1 c</span></li>
+      <li><span class="cy">2017</span><div><strong>Fundamentos en Ventilación Mecánica</strong> — <em>Formación Sanitaria, eLearning</em> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/4fa947d9-a98d-4c86-b4e7-787fa05cb43e" target="_blank" rel="noopener">certificate</a> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/2d9733f2-cf2b-4811-bc26-12150739cc75" target="_blank" rel="noopener">program</a></div><span class="hrs">13 c</span></li>
+      <li><span class="cy">2017</span><div><strong>Actualizaciones del Programa de Protocolo de Actuación en el uso de antibióticos (3ª ed.)</strong> — <em>SEIMC</em></div><span class="hrs">11,3 c</span></li>
+      <li><span class="cy">2016</span><div><strong>XII Curso de ecografía en anestesia y UCI</strong> — <em>Universidad de Navarra</em> <a class="dl" href="https://www.genspark.ai/aidrive/s/65a5d615-9245-4160-9d7e-6d37de935b02/bab0291a-3993-471f-b50c-5ebfbeb7320c" target="_blank" rel="noopener">certificate</a></div><span class="hrs">97 h</span></li>
+      <li><span class="cy">2016</span><div><strong>Ecografía en el paciente crítico</strong> — <em>Hospital Clínico San Carlos</em></div><span class="hrs">30 h</span></li>
+      <li><span class="cy">2014</span><div><strong>Cardiología intervencionista para no cardiólogos</strong> — <em>Sociedad Española de Cardiología</em></div><span class="hrs">5 h</span></li>
+      <li><span class="cy">2013</span><div><strong>ATLS (Ed. CLXX)</strong> — <em>American College of Surgeons</em></div><span class="hrs">75 h</span></li>
+      <li><span class="cy">2013</span><div><strong>Curso de Ecografía Clínica en Patología Aguda, Urgente y Crítica</strong> — <em>SEMES</em></div><span class="hrs">20 h</span></li>
+      <li><span class="cy">2012</span><div><strong>Curso básico de ecocardiografía</strong> — <em>IPEM</em></div><span class="hrs">7 h</span></li>
+      <li><span class="cy">2011</span><div><strong>Vía aérea y manejo del fibrobroncoscopio (17ª ed.)</strong> — <em>Madrid Medical Association (Colegio de Médicos)</em></div><span class="hrs">40 h</span></li>
+      <li><span class="cy">2011</span><div><strong>Curso de SCVA por SEMES-AHA</strong> — <em>Madrid Medical Association (Colegio de Médicos)</em></div><span class="hrs">30 h</span></li>
+      <li><span class="cy">2011</span><div><strong>RCP pediátrica avanzada</strong> — <em>Grupo Español de RCP pediátrica y neonatal</em></div><span class="hrs">32 h</span></li>
+      <li><span class="cy">2010</span><div><strong>Simposium Internacional de Neuromonitorización</strong> — <em>Hospital Vall d'Hebron</em></div><span class="hrs">32 h</span></li>
+      <li><span class="cy">2010</span><div><strong>Introducción al SPSS</strong> — <em>Agencia Laín Entralgo</em></div><span class="hrs">35 h</span></li>
+      <li><span class="cy">2010</span><div><strong>Nutrición en el paciente crítico</strong> — <em>Hospital La Paz</em></div><span class="hrs">25 h</span></li>
+      <li><span class="cy">2010</span><div><strong>Mechanical ventilation for Intensive Care Medicine residents</strong> — <em>Hospital de Henares · SEMICYUC</em></div><span class="hrs">25 h</span></li>
+      <li><span class="cy">2010</span><div><strong>Curso de Actualización en Medicina Intensiva</strong> — <em>Hospital Gregorio Marañón</em></div><span class="hrs">22 h</span></li>
+      <li><span class="cy">2010</span><div><strong>Manejo del paciente en situación de riesgo vital</strong> — <em>H.U. Gregorio Marañón</em></div><span class="hrs">10 h</span></li>
+      <li><span class="cy">2009</span><div><strong>Donación y trasplante de órganos en Medicina Intensiva</strong> — <em>ONT · SEMICYUC</em></div><span class="hrs">20 h</span></li>
+      <li><span class="cy">2009</span><div><strong>IV Curso interactivo de optimización antibiótica para residentes de Medicina Intensiva</strong> — <em>GTEI · SEMICYUC</em></div><span class="hrs">10 h</span></li>
+      <li><span class="cy">2009</span><div><strong>II Curso de actualización en Patología Infecciosa</strong> — <em>Agencia Laín Entralgo · Hospital Clínico San Carlos</em></div><span class="hrs">1,5 c</span></li>
+      <li><span class="cy">2008</span><div><strong>Manejo del paciente con dolor torácico en urgencias 1</strong> — <em>Agencia Laín Entralgo · H.G. Marañón, Servicio de Cardiología</em></div><span class="hrs">30 h</span></li>
+      <li><span class="cy">2008</span><div><strong>Recursos de información y documentación científica en Ciencias de la Salud (IV ed.)</strong> — <em>Agencia Laín Entralgo</em></div><span class="hrs">3,6 c</span></li>
+      <li><span class="cy">2008</span><div><strong>Curso de Soporte Vital Básico para personal del equipo de salud</strong> — <em>SEMES-AHA</em></div><span class="hrs">22 h</span></li>
+      <li><span class="cy">2007</span><div><strong>Paciente crítico: puesta al día en actitudes terapéuticas</strong> — <em>Formación Médica Continuada, H.U. La Paz</em></div><span class="hrs">30 h</span></li>
+      <li><span class="cy">2007</span><div><strong>Seminario EDHEP, Programa Integral Europeo para la donación de órganos</strong> — <em>Organización Nacional de Trasplantes</em></div><span class="hrs">9 h</span></li>
+    </ul>
+    <p style="margin-top:14px;font-size:13.5px;color:var(--muted);border-left:3px solid var(--accent);padding-left:12px">Accreditation from the Ministry of the Interior for training the State Security Forces in first aid (2008).</p>
+  </section>
+
+  <section id="idiomas" aria-labelledby="h-idiomas">
+    <div class="sh">
+      <span class="badge"><svg class="ic"><use href="#i-globe"/></svg></span>
+      <div><h2 id="h-idiomas">Languages</h2><small>Communication with patients and families</small></div>
+    </div>
+    <div class="langs">
+      <span class="chip"><svg class="ic"><use href="#i-globe"/></svg>Spanish <em>native</em></span>
+      <span class="chip"><svg class="ic"><use href="#i-globe"/></svg>English <em>B2 · upper-intermediate</em></span>
+      <span class="chip"><svg class="ic"><use href="#i-globe"/></svg>Catalan</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>Last updated: September 2026</span>
+    <span>CV of Jorge A. Rodríguez Aguirregabiria · Intensive Care Medicine · Madrid</span>
+  </footer>
+
+</div>
+</main>
+<script>
+  var btn=document.querySelector('.menu-btn'),rail=document.getElementById('rail'),bd=document.querySelector('.backdrop');
+  function closeMenu(){rail.classList.remove('open');bd.classList.remove('show');btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(){var o=rail.classList.toggle('open');bd.classList.toggle('show',o);btn.setAttribute('aria-expanded',o?'true':'false');});
+  bd.addEventListener('click',closeMenu);
+  rail.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',closeMenu);});
+  var links=Array.prototype.slice.call(rail.querySelectorAll('nav a'));
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id);});
+        }
+      });
+    },{rootMargin:'-35% 0px -60% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){obs.observe(s);});
+  }
+</script>
+
+</body>
+</html>
