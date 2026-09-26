@@ -111,22 +111,29 @@
     margin-top: 1.05cqw;
     background: var(--gold);
   }
-  .hint {
+  .qr {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.3cqw;
+    gap: .7cqw;
+    flex: none;
     text-decoration: none;
     color: var(--gold);
-    font-size: 2.05cqw;
-    letter-spacing: .03em;
-    line-height: 1.25;
-    text-align: right;
-    flex: none;
-    padding-bottom: .2cqw;
   }
-  .hint svg { width: 3.6cqw; height: 3.6cqw; flex: none; }
-  .hint small { display: block; margin-top: .25cqw; font-size: 1.45cqw; letter-spacing: 0; font-weight: 400; }
-  .hint:hover { text-decoration: underline; text-underline-offset: 2px; }
+  .qr img {
+    width: 21cqw;
+    height: 21cqw;
+    display: block;
+    background: var(--cream);
+    border-radius: 1.2cqw;
+  }
+  .qr span {
+    font-size: 1.55cqw;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-indent: .18em;
+    line-height: 1;
+  }
   @media print {
     @page { size: 85mm 55mm; margin: 0; }
     html, body { background: var(--navy) !important; margin: 0; width: 85mm; height: 55mm; }
@@ -140,6 +147,11 @@
       box-shadow: none;
     }
   }
+  html.export, html.export body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: var(--navy); }
+  html.export .toolbar { display: none !important; }
+  html.export .workspace { display: block; min-height: 0; padding: 0; width: 100%; height: 100%; }
+  html.export .scene { display: block; padding: 0; width: 100%; height: 100%; }
+  html.export .card { width: 100vw; height: 100vh; aspect-ratio: auto; box-shadow: none; }
 </style>
 </head>
 <body>
@@ -186,9 +198,9 @@
               </div>
             </div>
           </div>
-          <a class="hint" href="https://jrodagu-star.github.io/cv/tarjeta-cv.pdf">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l7.2 16 2-6.2L20 11.5z"/><path d="M13.5 13.5L19 19"/></svg>
-            <span>Pulsa para el PDF<small>github.io/cv/tarjeta-cv.pdf</small></span>
+          <a class="qr" href="https://jrodagu-star.github.io/cv/">
+            <img src="qr-cv.svg" alt="">
+            <span>CURRÍCULUM</span>
           </a>
         </div>
       </div>
@@ -196,6 +208,7 @@
   </div>
 </main>
 <script>
+  if (location.search.includes("export")) document.documentElement.classList.add("export");
   document.getElementById("print").addEventListener("click", () => window.print());
 </script>
 </body>
