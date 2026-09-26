@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="es" data-theme="dark">
+<html lang="es" data-theme="light">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -62,6 +62,12 @@ a:hover{text-decoration:underline}
 :fullscreen .actions .icon-exit{display:block}
 :-webkit-full-screen .actions .icon-enter{display:none}
 :-webkit-full-screen .actions .icon-exit{display:block}
+html.fs .actions .icon-enter{display:none}
+html.fs .actions .icon-exit{display:block}
+html.fs,html.fs body{background:var(--paper)}
+html.fs .rail,html.fs .section-nav,html.fs .skip{display:none!important}
+html.fs .content{position:fixed;inset:0;z-index:30;margin:0;overflow:auto;padding:16px 28px 32px;background:var(--paper)}
+html.fs .hero-meta{position:sticky;top:0;z-index:2;background:var(--paper);padding-bottom:8px}
 .actions button:hover{background:var(--wash)}
 h1{font-size:var(--text-hero);font-weight:600;letter-spacing:-.045em;line-height:1.08}
 h1 span{font-weight:400}
@@ -173,7 +179,7 @@ dialog::backdrop{background:oklch(15% .03 250 / .65)}
 </aside>
 <main class="content">
 <div class="page">
-<div class="hero" id="inicio"><div class="hero-meta"><p class="eyebrow">CURRÍCULUM VITAE <span>/</span> 2026</p><div class="actions"><button aria-label="Activar modo claro" id="theme" type="button"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/></svg></button><button aria-label="Imprimir / PDF" id="print" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V3h10v5"/><path d="M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="7" y="13" width="10" height="8" rx="1"/></svg></button><button aria-label="Pantalla completa" aria-pressed="false" id="fullscreen" type="button"><svg class="icon-enter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><svg class="icon-exit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg></button></div></div>
+<div class="hero" id="inicio"><div class="hero-meta"><p class="eyebrow">CURRÍCULUM VITAE <span>/</span> 2026</p><div class="actions"><button aria-label="Activar modo oscuro" id="theme" type="button"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/></svg></button><button aria-label="Imprimir / PDF" id="print" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V3h10v5"/><path d="M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="7" y="13" width="10" height="8" rx="1"/></svg></button><button aria-label="Pantalla completa" aria-pressed="false" id="fullscreen" type="button"><svg class="icon-enter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><svg class="icon-exit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg></button></div></div>
 <h1>Jorge A. Rodríguez<br/><span>Aguirregabiria</span></h1>
 <p class="role">Médico especialista en Medicina Intensiva</p>
 <p class="subs">Cuidados críticos · Soporte circulatorio avanzado · Innovación clínica</p>
@@ -438,7 +444,7 @@ function setTheme(dark){
   root.dataset.theme=dark?'dark':'light';
   themeButton.setAttribute('aria-label',themeLabels[dark?2:3]);
 }
-setTheme(true);
+setTheme(false);
 themeButton.addEventListener('click',()=>setTheme(root.dataset.theme!=='dark'));
 let printState=null;
 function preparePrint(){
@@ -458,24 +464,35 @@ const fsLabels={
   en:['Full screen','Exit full screen'],
   ca:['Pantalla completa','Sortir de la pantalla completa']
 }[root.lang]||['Pantalla completa','Salir de pantalla completa'];
-function fullscreenOn(){return !!(document.fullscreenElement||document.webkitFullscreenElement);}
+function fullscreenOn(){return !!(document.fullscreenElement||document.webkitFullscreenElement||root.classList.contains('fs'));}
 function syncFullscreen(){
   const on=fullscreenOn();
   fsButton.setAttribute('aria-label',fsLabels[on?1:0]);
   fsButton.setAttribute('aria-pressed',String(on));
 }
-if(document.fullscreenEnabled||document.webkitFullscreenEnabled){
-  fsButton.addEventListener('click',()=>{
-    const el=document.documentElement;
-    const done=fullscreenOn()
-      ?(document.exitFullscreen||document.webkitExitFullscreen).call(document)
-      :(el.requestFullscreen||el.webkitRequestFullscreen).call(el);
-    if(done&&done.catch)done.catch(()=>{});
-  });
-  document.addEventListener('fullscreenchange',syncFullscreen);
-  document.addEventListener('webkitfullscreenchange',syncFullscreen);
-  syncFullscreen();
-}else fsButton.hidden=true;
+function enableFill(){root.classList.add('fs');syncFullscreen();}
+fsButton.addEventListener('click',()=>{
+  if(fullscreenOn()){
+    root.classList.remove('fs');
+    if(document.fullscreenElement&&document.exitFullscreen) document.exitFullscreen();
+    else if(document.webkitFullscreenElement&&document.webkitExitFullscreen) document.webkitExitFullscreen();
+    syncFullscreen();
+    return;
+  }
+  const el=document.documentElement;
+  const safari=/Safari/i.test(navigator.userAgent)&&!/Chrome|Chromium|Edg|OPR/i.test(navigator.userAgent);
+  try{
+    const pending=safari&&el.webkitRequestFullscreen?el.webkitRequestFullscreen():el.requestFullscreen?el.requestFullscreen():el.webkitRequestFullscreen?el.webkitRequestFullscreen():null;
+    if(pending&&pending.catch) pending.catch(()=>enableFill());
+    else if(!pending) enableFill();
+  }catch(e){enableFill();}
+});
+document.addEventListener('fullscreenchange',syncFullscreen);
+document.addEventListener('webkitfullscreenchange',syncFullscreen);
+window.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&root.classList.contains('fs')){root.classList.remove('fs');syncFullscreen();}
+});
+syncFullscreen();
 const navLinks=[...document.querySelectorAll('.section-nav a:not(.to-top)')];
 document.querySelector('.to-top').addEventListener('click',event=>{
   event.preventDefault();
