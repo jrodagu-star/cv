@@ -8,14 +8,14 @@
 <meta content="Professional CV of Jorge A. Rodríguez Aguirregabiria, specialist in Intensive Care Medicine. Experience, education, research and clinical innovation." name="description"/>
 <link href="https://api.fontshare.com" rel="preconnect"/><link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&amp;display=swap" rel="stylesheet"/><style>:root{
   color-scheme:light;
-  --paper:oklch(100% 0 0);--bg:oklch(97.6% .004 240);--ink:oklch(27% .036 250);--muted:oklch(48% .021 250);--accent:oklch(42% .072 250);--line:oklch(27% .036 250 / .14);--wash:oklch(96% .01 250);
+  --paper:oklch(100% 0 0);--bg:oklch(97.6% .004 240);--ink:oklch(27% .036 250);--muted:oklch(48% .021 250);--accent:oklch(42% .072 250);--line:oklch(27% .036 250 / .14);--wash:oklch(96% .01 250);--menu:oklch(36% .09 255);--menu-ink:oklch(98% .004 250);--head:oklch(90% .04 220);--head-ink:oklch(28% .06 250);
   --sans:'Switzer',system-ui,sans-serif;
   --text-xs:clamp(.75rem,.73rem + .1vw,.8125rem);--text-sm:clamp(.875rem,.85rem + .1vw,.9375rem);--text-base:clamp(1rem,.97rem + .1vw,1.0625rem);--text-lg:clamp(1.125rem,1.08rem + .2vw,1.25rem);--text-xl:clamp(1.4rem,1.25rem + .5vw,1.75rem);--text-hero:clamp(2rem,1.35rem + 2.5vw,3.65rem);
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:20px;--s6:24px;--s8:32px;--s10:40px;--s12:48px;--s16:64px;--radius:6px;
 }
-[data-theme=dark]{color-scheme:dark;--paper:oklch(22% .018 250);--bg:oklch(18% .015 250);--ink:oklch(94% .006 250);--muted:oklch(75% .013 250);--accent:oklch(79% .065 250);--line:oklch(94% .006 250 / .17);--wash:oklch(27% .024 250)}
+[data-theme=dark]{color-scheme:dark;--paper:oklch(22% .018 250);--bg:oklch(18% .015 250);--ink:oklch(94% .006 250);--muted:oklch(75% .013 250);--accent:oklch(79% .065 250);--line:oklch(94% .006 250 / .17);--wash:oklch(27% .024 250);--menu:oklch(46% .11 255);--menu-ink:oklch(98% .004 250);--head:oklch(32% .045 210);--head-ink:oklch(94% .02 210)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:32px;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:var(--text-base);line-height:1.6}
 h1,h2,h3,p,figure{margin:0}
 button,a{-webkit-tap-highlight-color:transparent}
@@ -37,14 +37,14 @@ a:hover{text-decoration:underline}
 .language-switch a[aria-current=page]{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
 .language-switch a:hover{color:var(--ink);text-decoration:none;background:var(--wash)}
 .publication-note{font-size:var(--text-xs);color:var(--muted);margin-top:var(--s3)}
-.nav-caption{margin:var(--s16) 0 var(--s4);font-size:var(--text-xs);color:var(--muted);letter-spacing:.06em}
-.rail nav{display:flex;flex-direction:column;gap:var(--s1)}
-.rail nav a{padding:var(--s3);min-height:44px;border-radius:var(--radius);color:var(--muted);font-size:var(--text-sm);transition:background .16s,color .16s}
-.rail nav a:hover,.rail nav a.active{color:var(--ink);background:var(--wash);text-decoration:none}
-.rail nav a.active{font-weight:600}
+.section-nav{position:fixed;z-index:40;top:0;left:248px;width:min(1100px,calc(100vw - 248px - 32px));margin-left:max(16px,calc((100vw - 248px - 1100px) / 2));display:flex;gap:4px;overflow-x:auto;padding:6px;background:var(--menu);border:0;border-radius:14px;box-shadow:0 12px 32px oklch(15% .03 250 / .28);scrollbar-width:none}
+.section-nav::-webkit-scrollbar{display:none}
+.section-nav a{flex:none;white-space:nowrap;display:flex;align-items:center;padding:8px 12px;min-height:40px;border-radius:10px;color:oklch(98% .004 250 / .78);font-size:var(--text-xs);font-weight:500;transition:background .16s,color .16s}
+.section-nav a:hover,.section-nav a.active{color:var(--menu-ink);background:oklch(100% 0 0 / .16);text-decoration:none}
+.section-nav a.active{font-weight:700}
 .rail-foot{margin-top:auto;padding-top:var(--s12);font-size:var(--text-xs);color:var(--muted);line-height:1.8}
 .rail-foot span{display:block;margin-top:var(--s3)}
-.content{margin-left:248px;padding:var(--s6) var(--s6) var(--s6) 0}
+.content{margin-left:248px;padding:80px var(--s6) var(--s6) 0}
 .page{max-width:1100px;background:var(--paper);margin:auto;padding:var(--s10) clamp(24px,4.5vw,72px) var(--s8);border:1px solid var(--line)}
 .hero{padding-bottom:var(--s8);border-bottom:1px solid var(--line)}
 .hero-meta{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);margin-bottom:var(--s12)}
@@ -64,10 +64,10 @@ h1 span{font-weight:400}
 .contact{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s6);margin-top:var(--s6);font-size:var(--text-sm)}
 .contact a{color:var(--ink)}
 .contact span{color:var(--muted)}
-section{margin-top:var(--s12);scroll-margin-top:var(--s8)}
-.sh{margin-bottom:var(--s6);padding-bottom:var(--s4);border-bottom:2px solid var(--accent)}
-h2{font-size:var(--text-xl);font-weight:700;line-height:1.2;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
-.sh small{display:block;color:var(--muted);font-size:var(--text-xs);font-weight:400;letter-spacing:0;text-transform:none;margin-top:var(--s2)}
+section{margin-top:var(--s12);scroll-margin-top:0}
+.sh{margin-bottom:var(--s6);padding:var(--s4) var(--s4) var(--s3);border-radius:var(--radius);background:var(--head)}
+h2{font-size:var(--text-xl);font-weight:700;line-height:1.2;letter-spacing:.04em;text-transform:uppercase;color:var(--head-ink)}
+.sh small{display:block;color:var(--head-ink);opacity:.75;font-size:var(--text-xs);font-weight:400;letter-spacing:0;text-transform:none;margin-top:var(--s2)}
 #perfil{margin-top:var(--s8)}
 .profile-copy{font-size:var(--text-base);line-height:1.8;max-width:78ch}
 .focus-areas{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin-top:var(--s5);color:var(--muted);font-size:var(--text-xs)}
@@ -116,19 +116,19 @@ dialog::backdrop{background:oklch(15% .03 250 / .65)}
 .apx-box figcaption span{font-size:var(--text-sm);color:var(--muted)}
 .apx-mail{display:block;margin-top:var(--s3);font-size:var(--text-sm)}
 .apx-x{display:block;margin:0 var(--s5) var(--s5) auto;min-height:44px;padding:var(--s2) var(--s5);border:1px solid var(--line);border-radius:var(--radius);background:var(--wash);color:var(--ink);font-size:var(--text-sm)}
-@media(min-width:1700px){.rail{width:280px;padding:var(--s10) var(--s8)}.content{margin-left:280px;padding-right:var(--s10)}}
-@media(max-width:1100px){.rail{width:208px;padding:var(--s8) var(--s4)}.brand span{font-size:12px}.brand svg{width:32px}.content{margin-left:208px;padding:var(--s4) var(--s4) var(--s4) 0}.page{padding:var(--s8)}.entry{grid-template-columns:130px 1fr;gap:var(--s4)}}
-@media(max-width:800px){.rail{position:relative;width:auto;padding:var(--s4) var(--s5);border-bottom:1px solid var(--line)}.brand svg{width:36px}.nav-caption,.rail-foot{display:none}.rail nav{flex-direction:row;overflow-x:auto;gap:var(--s2);margin-top:var(--s3);padding-bottom:var(--s1)}.rail nav a{white-space:nowrap;padding:var(--s2) var(--s3);display:flex;align-items:center}.content{margin:0;padding:0}.page{border:0;padding:var(--s6)}.hero-meta{margin-bottom:var(--s8)}.devgrid{gap:var(--s3)}}
+@media(min-width:1700px){.rail{width:280px;padding:var(--s10) var(--s8)}.content{margin-left:280px;padding-right:var(--s10)}.section-nav{left:280px;width:min(1100px,calc(100vw - 280px - 48px));margin-left:max(24px,calc((100vw - 280px - 1100px) / 2))}}
+@media(max-width:1100px){.rail{width:208px;padding:var(--s8) var(--s4)}.brand span{font-size:12px}.brand svg{width:32px}.content{margin-left:208px;padding:80px var(--s4) var(--s4) 0}.page{padding:var(--s8)}.entry{grid-template-columns:130px 1fr;gap:var(--s4)}.section-nav{left:208px;width:min(1100px,calc(100vw - 208px - 24px));margin-left:max(12px,calc((100vw - 208px - 1100px) / 2))}}
+@media(max-width:800px){.rail{position:relative;width:auto;padding:72px var(--s5) var(--s4);border-bottom:1px solid var(--line)}.brand svg{width:36px}.rail-foot{display:none}.section-nav{top:0;left:8px;width:auto;right:8px;margin-left:0;border-top:0;border-radius:0 0 14px 14px}.content{margin:0;padding:0}.page{border:0;padding:var(--s6)}.hero-meta{margin-bottom:var(--s8)}.devgrid{gap:var(--s3)}}
 @media(max-width:520px){.hero-meta{align-items:center;flex-direction:row;gap:var(--s3)}.actions{width:auto}.actions button{flex:none;width:44px}.page{padding:var(--s6) var(--s5)}h1{font-size:clamp(1.95rem,8.9vw,2.75rem)}.role{font-size:var(--text-base)}.subs{font-size:var(--text-sm)}.contact{flex-direction:column;gap:var(--s2)}.entry{grid-template-columns:1fr;gap:var(--s2)}.when br{display:none}.pill{margin-right:var(--s2)}.devgrid{grid-template-columns:1fr}.courses li{grid-template-columns:36px 1fr;gap:var(--s2)}.hrs{grid-column:2;text-align:left}.details-label{float:none;display:block;margin-left:var(--s4)}.langs{gap:var(--s3) var(--s6)}footer{margin-top:var(--s10);flex-direction:column;gap:var(--s3)}footer span:last-child{text-align:left}section{margin-top:var(--s10)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{
   @page{size:A4;margin:15mm}
-  :root,[data-theme=dark]{color-scheme:light;--paper:#fff;--bg:#fff;--ink:#182d41;--muted:#455564;--accent:#244e73;--line:#d6dde4;--wash:#f3f6f8;--text-xs:8.5pt;--text-sm:9.5pt;--text-base:10pt;--text-lg:11.5pt;--text-xl:14pt;--text-hero:29pt}
+  :root,[data-theme=dark]{color-scheme:light;--paper:#fff;--bg:#fff;--ink:#182d41;--muted:#455564;--accent:#244e73;--line:#d6dde4;--wash:#f3f6f8;--head:#e4eef6;--head-ink:#1c3d5c;--text-xs:8.5pt;--text-sm:9.5pt;--text-base:10pt;--text-lg:11.5pt;--text-xl:14pt;--text-hero:29pt}
   body{background:white;line-height:1.45}
-  .rail,.actions,.skip,.apx,.language-switch{display:none!important}
+  .rail,.section-nav,.actions,.skip,.apx,.language-switch{display:none!important}
   .content{padding:0;margin:0}.page{border:0;padding:0;max-width:none}
   .hero-meta{margin-bottom:16px}.hero{padding-bottom:20px}h1{font-size:29pt}.role{margin-top:12px}.contact{margin-top:12px;gap:8px 16px;flex-direction:row}
-  section{margin-top:24px}.sh{margin-bottom:12px;padding-bottom:8px;break-after:avoid}
+  section{margin-top:24px}.sh{margin-bottom:12px;padding:6px 8px 8px;break-after:avoid}
   #perfil{margin-top:20px}.profile-copy{line-height:1.6}.focus-areas{margin-top:10px}
   .entry{grid-template-columns:108px 1fr;gap:16px;padding:12px 0;break-inside:avoid}
   h2,h3{break-after:avoid}.when{break-after:avoid}.what p:not(.where){margin-top:4px}
@@ -160,9 +160,9 @@ dialog::backdrop{background:oklch(15% .03 250 / .65)}
 </defs>
 </svg>
 <a class="skip" href="#perfil">Skip to content</a>
+<nav aria-label="CV sections" class="section-nav"><a href="#perfil">Professional profile</a><a href="#experiencia">Experience</a><a href="#formacion">Education and training</a><a href="#investigacion">Research</a><a href="#programas">Digital innovation</a><a href="#titulos">Qualifications</a><a href="#cursos">Continuing education</a><a href="#idiomas">Languages</a></nav>
 <aside aria-label="CV contents" class="rail" id="rail">
 <a aria-label="Jorge Rodríguez, home" class="brand" href="#inicio"><svg aria-hidden="true" fill="none" viewbox="0 0 48 48"><path d="M7 8h13v23c0 7-11 9-13 1M28 38V8h7c11 0 11 15 0 15h-7m6 0 10 15" stroke="currentColor" stroke-linejoin="round" stroke-width="2.7"></path></svg><span>JORGE RODRÍGUEZ<br/><small>INTENSIVE CARE MEDICINE</small></span></a><div aria-label="CV language" class="language-switch" role="navigation"><a href="../" hreflang="es" lang="es">Español</a><a aria-current="page" href="./" hreflang="en" lang="en">English</a><a href="../ca/" hreflang="ca" lang="ca">Català</a></div>
-<p class="nav-caption">PROFESSIONAL BACKGROUND</p><nav><a href="#perfil">Professional profile</a><a href="#experiencia">Experience</a><a href="#formacion">Education and training</a><a href="#investigacion">Research</a><a href="#programas">Digital innovation</a><a href="#titulos">Qualifications</a><a href="#cursos">Continuing education</a><a href="#idiomas">Languages</a></nav>
 <p class="rail-foot">Professional CV<br/>Madrid, Spain<br/><span>Updated · September 2026</span></p>
 </aside>
 <main class="content">
@@ -485,16 +485,26 @@ document.querySelectorAll('.apx-link').forEach(button=>{
   dialog.querySelector('.apx-x').addEventListener('click',()=>dialog.close());
   dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
 });
-const navLinks=[...document.querySelectorAll('.rail nav a')];
+const navLinks=[...document.querySelectorAll('.section-nav a')];
 const sections=[...document.querySelectorAll('main section[id]')];
+let navCurrent='';
 function updateNav(){
   let current=sections[0];
-  for(const section of sections){if(section.getBoundingClientRect().top<=160)current=section;}
+  for(const section of sections){if(section.getBoundingClientRect().top<=88)current=section;}
   navLinks.forEach(a=>{
     const active=a.hash==='#'+current.id;
     a.classList.toggle('active',active);
     if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');
   });
+  if(current.id!==navCurrent){
+    navCurrent=current.id;
+    const link=navLinks.find(a=>a.hash==='#'+current.id);
+    const nav=link&&link.parentElement;
+    if(nav){
+      const left=link.offsetLeft-(nav.clientWidth-link.offsetWidth)/2;
+      nav.scrollTo({left:Math.max(0,left),behavior:'smooth'});
+    }
+  }
 }
 window.addEventListener('scroll',updateNav,{passive:true});
 updateNav();
