@@ -68,9 +68,18 @@ h1{font-size:var(--text-hero);font-weight:600;letter-spacing:-.045em;line-height
 h1 span{font-weight:400}
 .role{font-size:var(--text-lg);font-weight:500;margin-top:var(--s6);color:var(--accent)}
 .subs{color:var(--muted);font-size:var(--text-sm);margin-top:var(--s2)}
-.contact{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s6);margin-top:var(--s6);font-size:var(--text-sm)}
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s6);margin-top:var(--s6);font-size:var(--text-sm)}
 .contact a{color:var(--ink)}
+.contact a.write{display:inline-flex;align-items:center;min-height:44px;padding:8px 18px;border-radius:999px;background:var(--menu);color:var(--menu-ink);font-weight:700;letter-spacing:.04em;text-decoration:none}
+.contact a.write:hover{filter:brightness(1.15);text-decoration:none}
 .contact span{color:var(--muted)}
+.contact-form{display:grid;gap:var(--s4);max-width:36rem}
+.contact-form label{display:grid;gap:var(--s2);font-size:var(--text-sm);font-weight:500}
+.contact-form input,.contact-form textarea{width:100%;font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;min-height:44px}
+.contact-form textarea{min-height:140px;resize:vertical}
+.contact-form button{justify-self:start;min-height:44px;padding:10px 18px;border:0;border-radius:var(--radius);background:var(--menu);color:var(--menu-ink);font:inherit;font-weight:600}
+.contact-form button:hover{filter:brightness(1.12)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 section{margin-top:var(--s12);scroll-margin-top:0}
 .sh{margin-bottom:var(--s6);padding:var(--s4) var(--s4) var(--s3);border-radius:var(--radius);background:var(--head)}
 h2{font-size:var(--text-xl);font-weight:700;line-height:1.2;letter-spacing:.04em;text-transform:uppercase;color:var(--head-ink)}
@@ -132,7 +141,7 @@ dialog::backdrop{background:oklch(15% .03 250 / .65)}
   @page{size:A4;margin:7mm 0}
   :root,[data-theme=dark]{color-scheme:light;--paper:#fff;--bg:#fff;--ink:#182d41;--muted:#455564;--accent:#244e73;--line:#d6dde4;--wash:#f3f6f8;--head:#e4eef6;--head-ink:#1c3d5c;--text-xs:8.5pt;--text-sm:9.5pt;--text-base:10pt;--text-lg:11.5pt;--text-xl:14pt;--text-hero:29pt}
   body{background:white;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .section-nav,.actions,.menu-toggle,.skip,.apx,.language-switch{display:none!important}
+  .section-nav,.actions,.menu-toggle,.skip,.apx,.language-switch,#contacto,.write{display:none!important}
   .content{padding:0;margin:0}.page{border:0;padding:0 10mm;max-width:none}
   .hero-meta{margin-bottom:16px}.hero{padding-bottom:20px}h1{font-size:29pt}.role{margin-top:12px}.contact{margin-top:12px;gap:8px 16px;flex-direction:row}
   section{margin-top:24px}.sh{margin:0 -10mm 12px;padding:6px 10mm 8px;border-radius:0;break-after:avoid}
@@ -168,7 +177,7 @@ dialog::backdrop{background:oklch(15% .03 250 / .65)}
 </svg>
 <a class="skip" href="#perfil">Saltar al contenido</a>
 <button aria-controls="section-nav" aria-expanded="false" aria-label="Apartados" class="menu-toggle" id="sections" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-<nav aria-label="Apartados del currículum" class="section-nav" id="section-nav"><a class="to-top" href="#inicio" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M7 10.8V20h10V10.8"/><path d="M10 20v-5h4v5"/></svg></a><a href="#perfil">Perfil profesional</a><a href="#experiencia">Experiencia</a><a href="#formacion">Formación académica</a><a href="#investigacion">Investigación</a><a href="#programas">Innovación digital</a><a href="#titulos">Otros títulos</a><a href="#cursos">Formación continua</a><a href="#idiomas">Idiomas</a></nav>
+<nav aria-label="Apartados del currículum" class="section-nav" id="section-nav"><a class="to-top" href="#inicio" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M7 10.8V20h10V10.8"/><path d="M10 20v-5h4v5"/></svg></a><a href="#perfil">Perfil profesional</a><a href="#experiencia">Experiencia</a><a href="#formacion">Formación académica</a><a href="#investigacion">Investigación</a><a href="#programas">Innovación digital</a><a href="#titulos">Otros títulos</a><a href="#cursos">Formación continua</a><a href="#idiomas">Idiomas</a><a href="#contacto">Contacto</a></nav>
 <div aria-label="Idioma del currículum" class="language-switch" role="navigation"><a aria-current="page" href="./" hreflang="es" lang="es">Español</a><a href="en/" hreflang="en" lang="en">English</a><a href="ca/" hreflang="ca" lang="ca">Català</a></div>
 <main class="content">
 <div class="page">
@@ -176,7 +185,7 @@ dialog::backdrop{background:oklch(15% .03 250 / .65)}
 <h1>Jorge A. Rodríguez<br/><span>Aguirregabiria</span></h1>
 <p class="role">Médico especialista en Medicina Intensiva</p>
 <p class="subs">Cuidados críticos · Soporte circulatorio avanzado · Innovación clínica</p>
-<nav aria-label="Datos de contacto" class="contact"><a href="mailto:jrodagu@gmail.com">jrodagu@gmail.com</a><a href="tel:+34670425741">+34 670 425 741</a><span>Pozuelo de Alarcón, Madrid</span></nav></div>
+<nav aria-label="Datos de contacto" class="contact"><a class="write" href="#contacto">Contacto</a><span>Pozuelo de Alarcón, Madrid</span></nav></div>
 <section aria-labelledby="h-perfil" id="perfil">
 <div class="sh">
 <div><h2 id="h-perfil">Perfil profesional</h2></div>
@@ -402,6 +411,18 @@ dialog::backdrop{background:oklch(15% .03 250 / .65)}
 <span class="chip"><svg aria-hidden="true" class="ic"><use href="#i-globe"></use></svg>Inglés <em>B2-C1</em></span>
 <span class="chip"><svg aria-hidden="true" class="ic"><use href="#i-globe"></use></svg>Catalán</span>
 </div>
+</section><section aria-labelledby="h-contacto" id="contacto">
+<div class="sh">
+<div><h2 id="h-contacto">Contacto</h2><small>Consultas profesionales</small></div>
+</div>
+<form class="contact-form" action="https://formspree.io/f/xzezjllz" method="POST">
+<label for="nombre">Nombre<input id="nombre" name="name" autocomplete="name" required type="text"></label>
+<label for="correo">Correo electrónico<input id="correo" name="email" autocomplete="email" required type="email"></label>
+<label for="mensaje">Mensaje<textarea id="mensaje" name="message" required></textarea></label>
+<p class="hp" aria-hidden="true"><input name="_gotcha" tabindex="-1" autocomplete="off" type="text"></p>
+<input name="_subject" type="hidden" value="Mensaje desde el currículum">
+<button type="submit">Enviar</button>
+</form>
 </section><footer><span>Jorge A. Rodríguez Aguirregabiria<br/>Medicina Intensiva · Madrid</span><span>Última actualización<br/>Septiembre 2026</span></footer>
 </div>
 </main>

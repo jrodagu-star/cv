@@ -77,12 +77,7 @@
     text-indent: .34em;
   }
   .unit {
-    margin-top: 0.7cqw;
-    color: var(--cream-dim);
-    font-size: 2.05cqw;
-    font-weight: 400;
-    letter-spacing: .38em;
-    text-indent: .38em;
+    display: none;
   }
   .bottom {
     margin-top: auto;
@@ -105,13 +100,6 @@
     color: var(--cream);
   }
   .row em { display: block; }
-  .tick {
-    display: block;
-    width: 13cqw;
-    height: 0.22cqw;
-    margin-top: 1.05cqw;
-    background: var(--gold);
-  }
   .qr {
     display: flex;
     flex-direction: column;
@@ -134,6 +122,26 @@
     letter-spacing: .18em;
     text-indent: .18em;
     line-height: 1;
+  }
+  .tap { display: none; text-decoration: none; }
+  html.whatsapp .qr { display: none; }
+  html.whatsapp .tap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.1cqw;
+    flex: none;
+    width: 24cqw;
+    color: var(--gold);
+    text-align: center;
+  }
+  html.whatsapp .tap svg { width: 8.4cqw; height: 8.4cqw; }
+  html.whatsapp .tap span {
+    font-size: 1.85cqw;
+    font-weight: 500;
+    letter-spacing: .14em;
+    line-height: 1.35;
   }
   @media print {
     @page { size: 85mm 55mm; margin: 0; }
@@ -179,30 +187,24 @@
         <div class="bottom">
           <div class="contacts">
             <div class="row">
-              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h3l1.2 3.2-2 1.2a12 12 0 005.4 5.4l1.2-2 3.2 1.2v3a1.6 1.6 0 01-1.6 1.6A14.5 14.5 0 014.9 5.1a1.6 1.6 0 011.6-1.6z"/></svg>
-              <div>
-                <a href="tel:+34670425741"><span>+34 670 425 741</span></a>
-                <i class="tick"></i>
-              </div>
-            </div>
-            <div class="row">
-              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="1.6"/><path d="M4 7l8 6 8-6"/></svg>
-              <div>
-                <a href="mailto:jrodagu@gmail.com"><span>jrodagu@gmail.com</span></a>
-                <i class="tick"></i>
-              </div>
-            </div>
-            <div class="row">
               <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.2-5.2-6.2-10a6.2 6.2 0 1112.4 0C18.2 15.8 12 21 12 21z"/><circle cx="12" cy="11" r="2.1"/></svg>
               <div>
-                <em>HM Puerta del Sur /</em>
-                <em>Madrid Montepríncipe</em>
+                <em>Pozuelo de Alarcón</em>
               </div>
             </div>
           </div>
           <a class="qr" href="https://jrodagu-star.github.io/cv/">
             <img src="qr-cv.svg" alt="">
-            <span>CURRÍCULUM</span>
+            <span>C.V.</span>
+          </a>
+          <a class="tap" href="https://jrodagu-star.github.io/cv/">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M27 30V14a4 4 0 0 1 8 0v16"/>
+              <path d="M35 28V19a3.4 3.4 0 0 1 6.8 0v13"/>
+              <path d="M41.8 30v-5.2a3.1 3.1 0 0 1 6.2 0V36"/>
+              <path d="M27 32.5c-.2-2.6-2-4.3-4.4-4.3-2.2 0-3.6 1.7-3.6 3.8v7.2C20 48 25.6 54 33.2 54h3.4c6.4 0 11.2-4.4 11.6-10.6l.4-7.2"/>
+            </svg>
+            <span>PULSA PARA<br>VER C.V.</span>
           </a>
         </div>
       </div>
@@ -211,6 +213,7 @@
 </main>
 <script>
   if (location.search.includes("export")) document.documentElement.classList.add("export");
+  if (location.search.includes("whatsapp") || location.search.includes("enlace")) document.documentElement.classList.add("whatsapp");
   document.getElementById("print").addEventListener("click", () => window.print());
 </script>
 </body>
