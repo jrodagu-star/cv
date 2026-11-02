@@ -1,0 +1,14 @@
+---
+description: Tras cada cambio del currículum, crear commit y subirlo a GitHub
+alwaysApply: true
+---
+
+# Subir cambios a GitHub
+
+Cuando termines un cambio pedido en este repositorio, haz commit de todos los archivos afectados y súbelos a `origin` en la rama actual.
+
+- Mensaje en español, en el estilo de los commits existentes: una frase que diga por qué cambia el currículum.
+- No hagas commit vacío si no hay cambios.
+- No incluyas secretos.
+- No uses `--force`, `--no-verify` ni cambies la configuración de git.
+- Si el commit o el push falla, corrige el problema y vuelve a intentarlo. No dejes el cambio solo en local.
